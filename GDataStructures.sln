@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GDataStructures", "GDataStructures\GDataStructures.vcxproj", "{3A0B08FD-FFB1-48EC-BCC4-D1514170A887}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GProblems", "GProblems\GProblems.vcxproj", "{C7CE5AD1-ADA8-4DF4-8A8B-6BACF4932FE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A0B08FD-FFB1-48EC-BCC4-D1514170A887}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3A0B08FD-FFB1-48EC-BCC4-D1514170A887}.Debug|Win32.Build.0 = Debug|Win32
+		{3A0B08FD-FFB1-48EC-BCC4-D1514170A887}.Release|Win32.ActiveCfg = Release|Win32
+		{3A0B08FD-FFB1-48EC-BCC4-D1514170A887}.Release|Win32.Build.0 = Release|Win32
+		{C7CE5AD1-ADA8-4DF4-8A8B-6BACF4932FE0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C7CE5AD1-ADA8-4DF4-8A8B-6BACF4932FE0}.Debug|Win32.Build.0 = Debug|Win32
+		{C7CE5AD1-ADA8-4DF4-8A8B-6BACF4932FE0}.Release|Win32.ActiveCfg = Release|Win32
+		{C7CE5AD1-ADA8-4DF4-8A8B-6BACF4932FE0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
