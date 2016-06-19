@@ -40,14 +40,66 @@ void selection_sort(std::vector<T>& arr, bool asc = true)
 	}
 }
 
+template<typename T>
+void merge_sort(std::vector<T>& C, int p, int r)
+{
+	if (p < r){ 
+		int q = p + (r - p) / 2;
+		merge_sort(C, p, q);
+		merge_sort(C, q + 1, r);
+		merge(C, p, q, r);
+	}
+}
+
+template<typename T>
+void merge(std::vector<T>& C, int p, int q, int r)
+{
+	std::cout << "p " << p << "q " << q << "r " << r << std::endl;
+	std::vector<T> L(C.begin() + p, C.begin() + q + 1);
+	std::vector<T> R(C.begin() + q + 1, C.begin() + r + 1);
+
+	//std::vector<T> L(q - p + 1);
+	//std::vector<T> R(r - q);
+	/*for (int i = 0; i < q - p + 1; i++){
+		L[i] = C[p + i];
+	}
+	for (int i = 0; i < r - q; i++){
+		R[i] = C[q + i + 1];
+	}*/
+	std::size_t li = 0;
+	std::size_t ri = 0;
+	std::size_t k = p;
+	while (li < L.size() && ri < R.size()){
+		if (L[li] <= R[ri])
+		{
+			C[k] = L[li];
+			li++; 
+		}
+		else
+		{
+			C[k] = R[ri];
+			ri++; 
+		}
+		k++;
+	}
+	while (li < L.size())
+	{
+		C[k] = L[li];
+		li++; k++;
+	}
+	while (ri < R.size())
+	{
+		C[k] = R[ri];
+		ri++; k++;
+	}
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
-	std::vector<int> arr = { { 12, 13, 15, 0} };
-	selection_sort(arr, false);
-	for (auto it = arr.begin(); it != arr.end(); ++it)
-	{
+	std::vector<int> C = { { -10, 2, 1000, 10, 1, 1} };
+	merge_sort(C, 0, 5);
+	for (auto it = C.begin(); it != C.end(); ++it)
 		std::cout << *it << ' ';
-	}
 	return 0;
 }
 
