@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GDataStructures", "GDataStructures\GDataStructures.vcxproj", "{3A0B08FD-FFB1-48EC-BCC4-D1514170A887}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GSorting", "GSorting\GSorting.vcxproj", "{9C982BCF-4D54-491A-8CA1-056EF985C964}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +17,10 @@ Global
 		{3A0B08FD-FFB1-48EC-BCC4-D1514170A887}.Debug|Win32.Build.0 = Debug|Win32
 		{3A0B08FD-FFB1-48EC-BCC4-D1514170A887}.Release|Win32.ActiveCfg = Release|Win32
 		{3A0B08FD-FFB1-48EC-BCC4-D1514170A887}.Release|Win32.Build.0 = Release|Win32
+		{9C982BCF-4D54-491A-8CA1-056EF985C964}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C982BCF-4D54-491A-8CA1-056EF985C964}.Debug|Win32.Build.0 = Debug|Win32
+		{9C982BCF-4D54-491A-8CA1-056EF985C964}.Release|Win32.ActiveCfg = Release|Win32
+		{9C982BCF-4D54-491A-8CA1-056EF985C964}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
