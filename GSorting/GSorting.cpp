@@ -2,6 +2,47 @@
 //
 
 #include "stdafx.h"
+
+// Determines if there exist 2 elements in vec whose sum is equal to x
+
+template<typename T>
+bool exist_sum(const std::vector<T>& vec, const T& val)
+{
+	if (vec.size() < 2)
+		return false;
+	else if (vec.size() == 2)
+		return (vec[0] + vec[1] == val);
+	auto cvec = vec;
+	merge_sort(cvec, 0, cvec.size() - 1);
+	std::vector<T>::const_reverse_iterator backIt = cvec.rbegin();
+	std::vector<T>::const_iterator frontIt = cvec.begin();
+	while (backIt.base() - 1 != frontIt)
+	{
+		T sum = *backIt + *frontIt;
+		if (sum == val)
+			return true;
+		else if (sum < val)
+			frontIt++;
+		else
+			backIt++;
+	}
+	return false;
+}
+
+template<typename T>
+T* binary_search(std::vector<T>& vec, const T& val, int l, int h)
+{
+	if (l > h)
+		return false;
+	int m = (h + l) / 2;
+	if (vec[m] == val)
+		return &vec[m];
+	else if (vec[m] > val)
+		return binary_search(vec, val, l, m - 1);
+	else
+		return binary_search(vec, val, m + 1, h);
+}
+
 template<typename T>
 void insertion_sort(std::vector<T>& arr, bool asc = true)
 {
@@ -41,9 +82,12 @@ void selection_sort(std::vector<T>& arr, bool asc = true)
 }
 
 template<typename T>
-void merge_sort(std::vector<T>& C, int p, int r)
+void merge_sort(std::vector<T>& C, int p, int r, bool use_insertion = false, int insertion_thresh = 20)
 {
-	if (p < r){ 
+	if ((r - p) <= insertion_thresh){
+		insertion_sort(C);
+	}
+	else if (p < r){ 
 		int q = p + (r - p) / 2;
 		merge_sort(C, p, q);
 		merge_sort(C, q + 1, r);
@@ -96,9 +140,9 @@ void merge(std::vector<T>& C, int p, int q, int r)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	std::vector<int> C = { { -10, 2, 1000, 10, 1, 1} };
-	merge_sort(C, 0, 5);
-	for (auto it = C.begin(); it != C.end(); ++it)
+	std::vector<int> C = { {1, 9, 8, 1, 4, 5, 1, 7, 4, 8, 2,5, 0, -1, 0, 2, 4, 5, 6,4 ,3, 4, 5, 9 ,1, 9} };
+	merge_sort(C, 0, C.size() - 1, true, 5);
+	for (auto it = C.begin(); it != C.end(); it++)
 		std::cout << *it << ' ';
 	return 0;
 }

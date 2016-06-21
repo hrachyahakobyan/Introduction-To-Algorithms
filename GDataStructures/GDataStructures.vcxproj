@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="binary_search_tree.h" />
     <ClInclude Include="binary_tree.h" />
     <ClInclude Include="gqueue_list.h" />
     <ClInclude Include="gqueue_stack.h" />
@@ -90,6 +91,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="binary_search_tree.cpp" />
     <ClCompile Include="binary_tree.cpp" />
     <ClCompile Include="GDataStructures.cpp" />
     <ClCompile Include="gqueue_list.cpp" />

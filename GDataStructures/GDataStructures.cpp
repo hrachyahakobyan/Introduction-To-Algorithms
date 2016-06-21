@@ -6,7 +6,7 @@
 #include "gstack_queue.h"
 #include "gstack_list.h"
 #include "gqueue_list.h"
-#include "binary_tree.h"
+#include "binary_search_tree.h"
 #include "lcrs_tree.h"
 
 void printOrderedPairs(std::string nums, std::string pref = "")
@@ -24,7 +24,7 @@ void printOrderedPairs(std::string nums, std::string pref = "")
 int _tmain(int argc, _TCHAR* argv[])
 {
 	int arr[11] = { 30, 20, 40, 10, 25, 35, 50, 5, 15, 28, 41 };
-	binary_tree<int> tree;
+	binary_search_tree<int> tree;
 	for (int i = 0; i < 11; i++)
 		tree.insert(arr[i]);
 	tree.test();
